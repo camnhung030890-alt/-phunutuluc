@@ -1,294 +1,679 @@
-﻿<!DOCTYPE html>
-<html lang="vi" class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>21 Ngày Kỷ Luật Mềm — Thiết Lập Lại Nhịp Sống | phunutuluc.com</title>
-  <meta name="description" content="Challenge 21 Ngày Kỷ Luật Mềm hoàn toàn miễn phí dành riêng cho phụ nữ muốn thiết lập lại nhịp sống." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-          },
-          colors: {
-            brand: {
-              bg: '#FBF9F5',
-              dark: '#2A2421',
-              muted: '#7A6F68',
-              accent: '#9A5B4C',
-              accentLight: '#F3ECE8',
-              border: '#EBE5DC',
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>21 Ngày Kỷ Luật Mềm — Phụ Nữ Tự Lực</title>
+  <meta name="description" content="Challenge 21 Ngày Kỷ Luật Mềm miễn phí dành cho phụ nữ muốn thiết lập lại nhịp sống bằng những thay đổi nhỏ, vừa sức và bền vững.">
+  <meta name="theme-color" content="#fbf8f3">
+  <meta property="og:title" content="21 Ngày Kỷ Luật Mềm — Phụ Nữ Tự Lực">
+  <meta property="og:description" content="Không ép mình trở thành một người khác. Chỉ từng ngày trở về với phiên bản chủ động, dịu dàng và vững vàng hơn.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body { background-color: #FBF9F5; color: #2A2421; font-family: 'Plus Jakarta Sans', sans-serif; }
-    .font-serif-title { font-family: 'Cormorant Garamond', serif; }
-    .fade-in { animation: fadeIn 0.4s ease-out forwards; }
-    @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+    :root{
+      --bg:#fbf8f3;
+      --paper:#fffdf9;
+      --ink:#28231f;
+      --muted:#746a63;
+      --accent:#9a5b4c;
+      --accent-2:#b77a67;
+      --soft:#f2e9e3;
+      --soft-2:#f7f1eb;
+      --line:#e9dfd6;
+      --green:#66735d;
+      --shadow:0 22px 60px rgba(70,49,39,.10);
+      --radius:28px;
+      --serif:"Cormorant Garamond",Georgia,serif;
+      --sans:"Manrope",Arial,sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:var(--sans);
+      line-height:1.7;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none}
+    button,input{font:inherit}
+    img{max-width:100%;display:block}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    .narrow{width:min(760px,calc(100% - 40px));margin:auto}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+      font-weight:700;color:var(--accent)
+    }
+    .eyebrow::before{content:"";width:26px;height:1px;background:var(--accent)}
+    .serif{font-family:var(--serif)}
+    .muted{color:var(--muted)}
+    .center{text-align:center}
+    .section{padding:94px 0}
+    .section-title{
+      font-family:var(--serif);
+      font-size:clamp(38px,5vw,58px);
+      line-height:1.02;
+      font-weight:500;
+      margin:12px 0 18px
+    }
+    .lead{font-size:17px;color:var(--muted);max-width:720px;margin:0 auto}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      border-radius:999px;padding:15px 24px;border:1px solid transparent;
+      font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+      transition:.2s ease;cursor:pointer
+    }
+    .btn-primary{background:var(--accent);color:white;box-shadow:0 12px 28px rgba(154,91,76,.22)}
+    .btn-primary:hover{transform:translateY(-2px);background:#854c3f}
+    .btn-secondary{background:rgba(255,255,255,.72);border-color:var(--line)}
+    .btn-secondary:hover{background:white;transform:translateY(-2px)}
+    .announcement{
+      background:#29231f;color:#f4eee9;text-align:center;
+      padding:9px 18px;font-size:11px;letter-spacing:.12em;text-transform:uppercase
+    }
+
+    header{
+      position:sticky;top:0;z-index:30;
+      background:rgba(251,248,243,.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(233,223,214,.86)
+    }
+    .nav{
+      min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px
+    }
+    .brand{display:flex;align-items:baseline;gap:10px;white-space:nowrap}
+    .brand strong{font-family:var(--serif);font-size:25px;letter-spacing:.06em;font-weight:600}
+    .brand span{font-size:10px;letter-spacing:.13em;color:var(--accent);text-transform:uppercase}
+    .navlinks{display:flex;align-items:center;gap:28px;font-size:12px;color:var(--muted)}
+    .navlinks a:hover{color:var(--ink)}
+
+    .hero{
+      position:relative;overflow:hidden;
+      padding:98px 0 82px;
+      background:
+        radial-gradient(circle at 78% 20%, rgba(183,122,103,.12), transparent 28%),
+        radial-gradient(circle at 10% 80%, rgba(102,115,93,.08), transparent 25%);
+    }
+    .hero::after{
+      content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(154,91,76,.12);
+      border-radius:50%;right:-160px;top:90px
+    }
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+    .hero h1{
+      font-family:var(--serif);font-weight:500;
+      font-size:clamp(58px,7vw,88px);line-height:.92;
+      letter-spacing:-.035em;margin:20px 0 24px
+    }
+    .hero h1 em{font-weight:500;color:var(--accent)}
+    .hero-copy{font-size:17px;color:var(--muted);max-width:620px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+    .micro{font-size:11px;color:var(--muted);margin-top:14px}
+    .quote-card{
+      position:relative;background:rgba(255,253,249,.84);border:1px solid var(--line);
+      border-radius:180px 180px 28px 28px;padding:86px 44px 42px;
+      min-height:510px;display:flex;flex-direction:column;justify-content:flex-end;
+      box-shadow:var(--shadow)
+    }
+    .quote-card::before{
+      content:"21";position:absolute;top:50px;left:50%;transform:translateX(-50%);
+      font-family:var(--serif);font-size:150px;line-height:1;color:rgba(154,91,76,.10)
+    }
+    .quote-card blockquote{
+      font-family:var(--serif);font-size:31px;line-height:1.15;font-style:italic;
+      text-align:center;margin:0;color:#463a34
+    }
+    .quote-card p{text-align:center;font-size:12px;color:var(--muted);margin:22px 0 0}
+
+    .trust{
+      border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+      background:rgba(255,255,255,.42)
+    }
+    .trust-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+    .trust-item{padding:28px;text-align:center}
+    .trust-item+ .trust-item{border-left:1px solid var(--line)}
+    .trust-item strong{font-family:var(--serif);font-size:32px;font-weight:600}
+    .trust-item span{display:block;font-size:11px;color:var(--muted);margin-top:2px}
+
+    .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+    .problem{
+      background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:28px;
+      min-height:220px
+    }
+    .problem .icon{
+      width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+      background:var(--soft);font-size:20px;margin-bottom:22px
+    }
+    .problem h3{font-size:16px;margin:0 0 8px}
+    .problem p{font-size:13px;color:var(--muted);margin:0}
+
+    .manifesto{background:#2c2622;color:#f7efe9;position:relative;overflow:hidden}
+    .manifesto .narrow{position:relative;z-index:1}
+    .manifesto .eyebrow{color:#d7a896}
+    .manifesto .eyebrow::before{background:#d7a896}
+    .manifesto h2{color:white}
+    .manifesto p{font-family:var(--serif);font-size:clamp(27px,4vw,40px);line-height:1.3;margin:28px 0 0}
+    .manifesto strong{color:#ddb5a6;font-weight:500}
+
+    .pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:48px}
+    .pillar{
+      padding:26px 28px;border:1px solid var(--line);border-radius:22px;background:var(--paper);
+      display:grid;grid-template-columns:52px 1fr;gap:18px;align-items:start
+    }
+    .num{
+      width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+      background:var(--soft);font-family:var(--serif);font-size:19px;color:var(--accent);font-weight:600
+    }
+    .pillar h3{font-family:var(--serif);font-size:25px;line-height:1.1;margin:2px 0 8px;font-weight:600}
+    .pillar p{font-size:12.5px;color:var(--muted);margin:0}
+    .pillar:last-child{grid-column:1/-1}
+
+    .timeline{
+      margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px
+    }
+    .week{border-radius:26px;padding:30px;background:var(--paper);border:1px solid var(--line)}
+    .week .tag{font-size:11px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+    .week h3{font-family:var(--serif);font-size:30px;line-height:1.05;margin:8px 0 14px}
+    .week p{font-size:13px;color:var(--muted);margin:0}
+
+    .fit{
+      background:var(--soft-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)
+    }
+    .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:46px}
+    .fit-card{padding:30px;border-radius:26px;background:rgba(255,255,255,.7);border:1px solid var(--line)}
+    .fit-card h3{font-family:var(--serif);font-size:30px;margin:0 0 18px}
+    .check{display:flex;gap:12px;margin:13px 0;font-size:13px;color:var(--muted)}
+    .check b{color:var(--green)}
+    .not b{color:var(--accent)}
+
+    .about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:70px;align-items:center}
+    .portrait-placeholder{
+      min-height:470px;border-radius:180px 180px 28px 28px;
+      background:
+        linear-gradient(160deg, rgba(154,91,76,.14), rgba(102,115,93,.08)),
+        var(--soft);
+      border:1px solid var(--line);display:grid;place-items:center;text-align:center;padding:32px;
+      color:var(--muted)
+    }
+    .portrait-placeholder span{font-family:var(--serif);font-size:30px;line-height:1.15}
+    .about-copy h2{font-family:var(--serif);font-size:50px;line-height:1;margin:10px 0 22px;font-weight:500}
+    .about-copy p{font-size:14px;color:var(--muted)}
+    .about-note{border-left:2px solid var(--accent);padding-left:18px;margin-top:24px;font-family:var(--serif);font-size:23px;line-height:1.3}
+
+    .register{padding:96px 0;background:linear-gradient(180deg,var(--bg),#f4ebe5)}
+    .form-shell{
+      width:min(700px,calc(100% - 40px));margin:auto;
+      background:var(--paper);border:1px solid var(--line);border-radius:32px;
+      padding:44px;box-shadow:var(--shadow)
+    }
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .field.full{grid-column:1/-1}
+    label{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 7px}
+    input{
+      width:100%;border:1px solid var(--line);background:#fcfaf7;color:var(--ink);
+      border-radius:14px;padding:14px 15px;outline:none
+    }
+    input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(154,91,76,.08)}
+    .privacy{font-size:10.5px;color:var(--muted);text-align:center;margin:12px 0 0}
+    .form-status{display:none;margin-top:14px;padding:12px 14px;border-radius:12px;font-size:12px}
+    .form-status.info{display:block;background:#f5eee9;color:#755245;border:1px solid #e9d7cc}
+    .form-status.ok{display:block;background:#eef2eb;color:#4f6148;border:1px solid #d9e2d4}
+    .form-status.error{display:block;background:#f8ecea;color:#8b473f;border:1px solid #efd6d2}
+
+    .faq{width:min(820px,calc(100% - 40px));margin:48px auto 0}
+    details{border-bottom:1px solid var(--line);padding:20px 0}
+    summary{cursor:pointer;font-weight:600;font-size:14px;list-style:none}
+    summary::-webkit-details-marker{display:none}
+    summary::after{content:"+";float:right;color:var(--accent);font-size:20px;font-weight:400}
+    details[open] summary::after{content:"–"}
+    details p{font-size:13px;color:var(--muted);margin:12px 34px 0 0}
+
+    footer{padding:48px 0 110px;border-top:1px solid var(--line);text-align:center}
+    footer .name{font-family:var(--serif);font-size:27px}
+    footer p{font-size:11px;color:var(--muted)}
+
+    .mobile-cta{
+      display:none;position:fixed;left:14px;right:14px;bottom:14px;z-index:40
+    }
+
+    .modal{
+      position:fixed;inset:0;background:rgba(25,20,17,.55);backdrop-filter:blur(6px);
+      display:none;align-items:center;justify-content:center;padding:20px;z-index:100
+    }
+    .modal.open{display:flex}
+    .modal-card{
+      width:min(470px,100%);background:var(--paper);border:1px solid var(--line);
+      border-radius:28px;padding:34px;text-align:center;box-shadow:var(--shadow)
+    }
+    .modal-card .tick{
+      width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
+      background:#edf1ea;color:var(--green);margin:0 auto 20px;font-size:24px
+    }
+    .modal-card h3{font-family:var(--serif);font-size:34px;line-height:1.05;margin:0 0 12px;font-weight:500}
+    .modal-card p{font-size:13px;color:var(--muted)}
+    .modal-actions{display:grid;gap:10px;margin-top:22px}
+
+    @media (max-width:900px){
+      .navlinks a:not(.btn){display:none}
+      .hero-grid,.about-grid{grid-template-columns:1fr}
+      .hero{padding-top:72px}
+      .hero-grid{gap:46px}
+      .quote-card{min-height:400px;max-width:520px;margin:auto}
+      .problem-grid,.timeline{grid-template-columns:1fr}
+      .pillars{grid-template-columns:1fr}
+      .pillar:last-child{grid-column:auto}
+      .about-grid{gap:38px}
+      .portrait-placeholder{min-height:360px;max-width:520px;width:100%;margin:auto}
+    }
+    @media (max-width:640px){
+      .wrap,.narrow{width:min(100% - 28px,1120px)}
+      .section{padding:70px 0}
+      .announcement{font-size:9px}
+      .nav{min-height:66px}
+      .brand strong{font-size:21px}
+      .brand span{display:none}
+      .nav .btn{display:none}
+      .hero{padding:62px 0 60px}
+      .hero h1{font-size:58px}
+      .hero-copy{font-size:15px}
+      .hero-actions{display:grid}
+      .hero-actions .btn{width:100%}
+      .quote-card{border-radius:130px 130px 24px 24px;padding:72px 28px 34px;min-height:370px}
+      .quote-card::before{font-size:120px}
+      .quote-card blockquote{font-size:27px}
+      .trust-grid{grid-template-columns:1fr}
+      .trust-item+.trust-item{border-left:0;border-top:1px solid var(--line)}
+      .problem-grid{gap:12px}
+      .problem{min-height:auto}
+      .pillar{grid-template-columns:42px 1fr;padding:22px 20px}
+      .num{width:40px;height:40px}
+      .pillar h3{font-size:22px}
+      .fit-grid{grid-template-columns:1fr}
+      .about-copy h2{font-size:42px}
+      .form-shell{width:calc(100% - 28px);padding:28px 20px}
+      .form-grid{grid-template-columns:1fr}
+      .field.full{grid-column:auto}
+      .mobile-cta{display:block}
+      footer{padding-bottom:105px}
+    }
   </style>
 </head>
-<body class="antialiased">
 
-  <!-- ANNOUNCEMENT BAR -->
-  <aside class="bg-[#2A2421] text-stone-200 text-xs py-2 px-4 text-center tracking-wider font-light">
-    ✨ CHƯƠNG TRÌNH ĐỒNG HÀNH HOÀN TOÀN MIỄN PHÍ DÀNH RIÊNG CHO PHỤ NỮ • 2026
-  </aside>
+<body>
+  <div class="announcement">21 ngày đồng hành miễn phí dành riêng cho phụ nữ · 2026</div>
 
-  <!-- HEADER -->
-  <header class="py-5 px-6 max-w-4xl mx-auto flex items-center justify-between border-b border-[#EBE5DC]">
-    <a href="#" class="font-serif-title text-xl md:text-2xl font-semibold tracking-wide text-[#2A2421] uppercase">
-      PHỤ NỮ TỰ LỰC
-      <span class="text-xs tracking-widest font-sans font-normal text-[#9A5B4C] block md:inline md:ml-2">· BECOMING <em>HER</em></span>
-    </a>
-    <a href="#dang-ky" class="hidden sm:inline-flex items-center text-xs tracking-widest uppercase font-semibold bg-[#9A5B4C] text-white px-5 py-2.5 rounded-full hover:bg-[#7d4a3c] transition shadow-sm">
-      Đăng Ký Miễn Phí
-    </a>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Phụ Nữ Tự Lực">
+        <strong>PHỤ NỮ TỰ LỰC</strong>
+        <span>Becoming Her</span>
+      </a>
+      <nav class="navlinks" aria-label="Điều hướng chính">
+        <a href="#hanh-trinh">Hành trình</a>
+        <a href="#phu-hop">Dành cho ai</a>
+        <a href="#ve-toi">Về tôi</a>
+        <a class="btn btn-primary" href="#dang-ky">Đăng ký miễn phí</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Challenge 21 ngày</div>
+          <h1>Kỷ luật,<br>nhưng vẫn <em>dịu dàng.</em></h1>
+          <p class="hero-copy">
+            Không ép mình thành một phiên bản hoàn hảo. Chỉ từng ngày xây lại nhịp sống bằng những việc nhỏ:
+            dậy sớm hơn, vận động, đọc sách, quản trị điện thoại, ăn tại nhà, biết ơn và chủ động lên kế hoạch.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#dang-ky">Tham gia miễn phí →</a>
+            <a class="btn btn-secondary" href="#hanh-trinh">Xem lộ trình 21 ngày</a>
+          </div>
+          <p class="micro">Không cần bắt đầu thật giỏi. Chỉ cần bắt đầu thật.</p>
+        </div>
 
-  <!-- HERO -->
-  <section class="max-w-3xl mx-auto px-6 pt-14 pb-16 text-center">
-    <div class="inline-block bg-[#F3ECE8] text-[#9A5B4C] text-xs px-4 py-1.5 rounded-full font-medium tracking-wide uppercase mb-6">
-      🌱 Challenge 21 Ngày Tái Thiết Lối Sống
-    </div>
-    <h1 class="font-serif-title text-5xl sm:text-6xl md:text-7xl font-normal leading-tight text-[#2A2421] mb-5">
-      21 Ngày Kỷ Luật Mềm
-    </h1>
-    <p class="font-serif-title text-xl sm:text-2xl italic text-[#7A6F68] mb-8 max-w-xl mx-auto leading-relaxed">
-      "Mỗi ngày một chút tử tế với chính mình,<br/>cuộc đời sẽ tự khắc dịu êm."
-    </p>
-    <p class="text-sm sm:text-base text-[#7A6F68] max-w-xl mx-auto leading-relaxed mb-10">
-      Hoàn toàn miễn phí — Dành cho phụ nữ muốn thiết lập lại nhịp sống: dậy sớm hơn, vận động, đọc sách, quản trị điện thoại, ăn tại nhà, biết ơn và chủ động lập kế hoạch mỗi ngày.
-    </p>
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="#dang-ky" class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-4 bg-[#9A5B4C] text-white font-semibold text-sm rounded-full tracking-wider uppercase hover:bg-[#7d4a3c] transition shadow-lg transform hover:-translate-y-0.5">
-        Tham Gia Miễn Phí Ngay →
-      </a>
-      <a href="#noi-dung" class="w-full sm:w-auto inline-flex justify-center items-center px-7 py-4 border border-[#EBE5DC] bg-white text-[#2A2421] font-medium text-sm rounded-full hover:bg-[#FBF9F5] transition">
-        Xem Lộ Trình 21 Ngày
-      </a>
-    </div>
-    <!-- Trust badges -->
-    <div class="mt-14 pt-8 border-t border-[#EBE5DC] grid grid-cols-3 gap-4 text-center text-[#7A6F68]">
-      <div>
-        <p class="font-serif-title text-3xl text-[#2A2421] font-semibold">100%</p>
-        <p class="text-xs mt-1">Miễn phí tham gia</p>
+        <aside class="quote-card" aria-label="Thông điệp chương trình">
+          <blockquote>“Mỗi ngày một chút tử tế với chính mình, cuộc đời sẽ tự khắc dịu êm.”</blockquote>
+          <p>21 NGÀY KỶ LUẬT MỀM · PHỤ NỮ TỰ LỰC</p>
+        </aside>
       </div>
-      <div>
-        <p class="font-serif-title text-3xl text-[#2A2421] font-semibold">21 Ngày</p>
-        <p class="text-xs mt-1">Đồng hành mỗi ngày</p>
-      </div>
-      <div>
-        <p class="font-serif-title text-3xl text-[#2A2421] font-semibold">Nhóm Zalo</p>
-        <p class="text-xs mt-1">Cộng đồng riêng</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- VẤN ĐỀ -->
-  <section class="bg-white py-16 border-y border-[#EBE5DC]">
-    <div class="max-w-2xl mx-auto px-6">
-      <div class="text-center mb-10">
-        <span class="text-xs tracking-widest text-[#9A5B4C] font-semibold uppercase">Lắng nghe chính mình</span>
-        <h2 class="font-serif-title text-3xl sm:text-4xl text-[#2A2421] mt-2">Có phải bạn đang cảm thấy...</h2>
+    <section class="trust" aria-label="Thông tin chương trình">
+      <div class="wrap trust-grid">
+        <div class="trust-item"><strong>100%</strong><span>Miễn phí tham gia</span></div>
+        <div class="trust-item"><strong>21 ngày</strong><span>Mỗi ngày một bước nhỏ</span></div>
+        <div class="trust-item"><strong>7 trụ cột</strong><span>Cho một nhịp sống chủ động hơn</span></div>
       </div>
-      <div class="space-y-4">
-        <div class="p-5 rounded-2xl bg-[#FBF9F5] border border-[#EBE5DC] flex items-start gap-4">
-          <span class="text-2xl">📱</span>
-          <div>
-            <h3 class="font-semibold text-[#2A2421] text-sm sm:text-base">Mở mắt ra là cầm điện thoại</h3>
-            <p class="text-xs sm:text-sm text-[#7A6F68] mt-1 leading-relaxed">Vừa thức dậy đã lướt mạng xã hội trong vô thức, bắt đầu ngày mới bằng sự mệt mỏi và lo âu.</p>
-          </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="center">
+          <span class="eyebrow">Có thể bạn đang ở đây</span>
+          <h2 class="section-title">Không phải bạn thiếu quyết tâm.<br>Có thể bạn chỉ đang quá tải.</h2>
+          <p class="lead">Kỷ luật mềm không bắt đầu bằng việc ép bản thân thêm nữa. Nó bắt đầu bằng việc nhìn lại nhịp sống và chọn một cách đi vừa sức hơn.</p>
         </div>
-        <div class="p-5 rounded-2xl bg-[#FBF9F5] border border-[#EBE5DC] flex items-start gap-4">
-          <span class="text-2xl">⏳</span>
-          <div>
-            <h3 class="font-semibold text-[#2A2421] text-sm sm:text-base">Một ngày trôi qua vội vã nhưng không đọng lại gì</h3>
-            <p class="text-xs sm:text-sm text-[#7A6F68] mt-1 leading-relaxed">Làm việc cả ngày kiệt sức nhưng tối về lại thấy bản thân chưa làm được điều thực sự ý nghĩa cho chính mình.</p>
-          </div>
-        </div>
-        <div class="p-5 rounded-2xl bg-[#FBF9F5] border border-[#EBE5DC] flex items-start gap-4">
-          <span class="text-2xl">🌿</span>
-          <div>
-            <h3 class="font-semibold text-[#2A2421] text-sm sm:text-base">Bỏ bê cơ thể và nhịp sống</h3>
-            <p class="text-xs sm:text-sm text-[#7A6F68] mt-1 leading-relaxed">Ăn uống thất thường, ít vận động, thiếu thời gian tĩnh lặng để đọc sách và trò chuyện với tâm trí.</p>
-          </div>
+
+        <div class="problem-grid">
+          <article class="problem">
+            <div class="icon">📱</div>
+            <h3>Mở mắt ra là cầm điện thoại</h3>
+            <p>Ngày mới bắt đầu bằng dòng tin, thông báo và sự phân tán trước cả khi bạn kịp nghe mình cần gì.</p>
+          </article>
+          <article class="problem">
+            <div class="icon">⏳</div>
+            <h3>Bận cả ngày nhưng vẫn thấy thiếu</h3>
+            <p>Bạn hoàn thành rất nhiều việc cho công việc và gia đình, nhưng những điều dành cho chính mình luôn bị đẩy xuống cuối.</p>
+          </article>
+          <article class="problem">
+            <div class="icon">🌿</div>
+            <h3>Muốn thay đổi nhưng thường bỏ dở</h3>
+            <p>Bắt đầu rất quyết tâm, rồi nhanh chóng kiệt sức vì kế hoạch quá nặng và cảm giác “không làm đủ tốt”.</p>
+          </article>
         </div>
       </div>
-      <div class="mt-10 text-center">
-        <p class="font-serif-title italic text-xl sm:text-2xl text-[#9A5B4C] leading-relaxed">
-          "Kỷ luật mềm là lời hẹn tử tế nhất<br/>bạn dành riêng cho cuộc đời mình."
+    </section>
+
+    <section class="section manifesto">
+      <div class="narrow center">
+        <span class="eyebrow">Một định nghĩa khác về kỷ luật</span>
+        <h2 class="section-title">Kỷ luật mềm không phải nuông chiều.</h2>
+        <p>
+          Đó là khi bạn vẫn giữ lời hứa với mình, nhưng không dùng <strong>chỉ trích, cực đoan hay cảm giác tội lỗi</strong>
+          để bắt bản thân phải tiến lên.
         </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 7 TRỤ CỘT -->
-  <section id="noi-dung" class="py-16 max-w-3xl mx-auto px-6">
-    <div class="text-center mb-12">
-      <span class="text-xs tracking-widest text-[#9A5B4C] font-semibold uppercase">Lộ trình rèn luyện</span>
-      <h2 class="font-serif-title text-3xl sm:text-4xl text-[#2A2421] mt-2">7 Trụ Cột Trong 21 Ngày</h2>
-      <p class="text-[#7A6F68] text-xs sm:text-sm mt-3 max-w-md mx-auto">Mỗi ngày một bước nhỏ, vừa vặn và bền bỉ để chuyển hóa lối sống từ sâu bên trong.</p>
-    </div>
-    <div class="grid sm:grid-cols-2 gap-5">
-      <div class="p-6 rounded-2xl bg-white border border-[#EBE5DC] shadow-sm hover:shadow-md transition">
-        <div class="w-8 h-8 rounded-full bg-[#F3ECE8] text-[#9A5B4C] flex items-center justify-center font-serif-title font-bold text-sm mb-3">01</div>
-        <h3 class="font-serif-title text-xl text-[#2A2421] font-semibold">Dậy Sớm Hơn 30 Phút</h3>
-        <p class="text-xs text-[#7A6F68] mt-2 leading-relaxed">Dành trọn vẹn khoảng thời gian đầu ngày yên ắng nhất cho bản thân trước khi thế giới thức giấc.</p>
-      </div>
-      <div class="p-6 rounded-2xl bg-white border border-[#EBE5DC] shadow-sm hover:shadow-md transition">
-        <div class="w-8 h-8 rounded-full bg-[#F3ECE8] text-[#9A5B4C] flex items-center justify-center font-serif-title font-bold text-sm mb-3">02</div>
-        <h3 class="font-serif-title text-xl text-[#2A2421] font-semibold">Vận Động Nhẹ Nhàng</h3>
-        <p class="text-xs text-[#7A6F68] mt-2 leading-relaxed">15–20 phút yoga, giãn cơ hoặc đi bộ để đánh thức từng tế bào và lưu thông năng lượng tích cực.</p>
-      </div>
-      <div class="p-6 rounded-2xl bg-white border border-[#EBE5DC] shadow-sm hover:shadow-md transition">
-        <div class="w-8 h-8 rounded-full bg-[#F3ECE8] text-[#9A5B4C] flex items-center justify-center font-serif-title font-bold text-sm mb-3">03</div>
-        <h3 class="font-serif-title text-xl text-[#2A2421] font-semibold">Đọc Sách Nuôi Dưỡng</h3>
-        <p class="text-xs text-[#7A6F68] mt-2 leading-relaxed">Duy trì thói quen đọc 10–15 trang sách mỗi ngày giúp tâm trí sáng tỏ và bình an.</p>
-      </div>
-      <div class="p-6 rounded-2xl bg-white border border-[#EBE5DC] shadow-sm hover:shadow-md transition">
-        <div class="w-8 h-8 rounded-full bg-[#F3ECE8] text-[#9A5B4C] flex items-center justify-center font-serif-title font-bold text-sm mb-3">04</div>
-        <h3 class="font-serif-title text-xl text-[#2A2421] font-semibold">Quản Trị Điện Thoại</h3>
-        <p class="text-xs text-[#7A6F68] mt-2 leading-relaxed">Thiết lập giờ giới nghiêm cho màn hình, giải phóng tâm trí khỏi sự quá tải thông tin số.</p>
-      </div>
-      <div class="p-6 rounded-2xl bg-white border border-[#EBE5DC] shadow-sm hover:shadow-md transition">
-        <div class="w-8 h-8 rounded-full bg-[#F3ECE8] text-[#9A5B4C] flex items-center justify-center font-serif-title font-bold text-sm mb-3">05</div>
-        <h3 class="font-serif-title text-xl text-[#2A2421] font-semibold">Ăn Lành Tại Nhà</h3>
-        <p class="text-xs text-[#7A6F68] mt-2 leading-relaxed">Tự tay chuẩn bị những bữa ăn tươi ngon, nuôi dưỡng sức khỏe cơ thể và tinh thần ấm áp.</p>
-      </div>
-      <div class="p-6 rounded-2xl bg-white border border-[#EBE5DC] shadow-sm hover:shadow-md transition">
-        <div class="w-8 h-8 rounded-full bg-[#F3ECE8] text-[#9A5B4C] flex items-center justify-center font-serif-title font-bold text-sm mb-3">06</div>
-        <h3 class="font-serif-title text-xl text-[#2A2421] font-semibold">Thực Hành Biết Ơn</h3>
-        <p class="text-xs text-[#7A6F68] mt-2 leading-relaxed">Ghi lại 3 điều bình dị khiến bạn mỉm cười mỗi ngày để nuôi dưỡng lòng bao dung và hạnh phúc.</p>
-      </div>
-      <div class="sm:col-span-2 p-6 rounded-2xl bg-white border border-[#EBE5DC] shadow-sm hover:shadow-md transition">
-        <div class="w-8 h-8 rounded-full bg-[#F3ECE8] text-[#9A5B4C] flex items-center justify-center font-serif-title font-bold text-sm mb-3">07</div>
-        <h3 class="font-serif-title text-xl text-[#2A2421] font-semibold">Lập Kế Hoạch & Review Mỗi Tối</h3>
-        <p class="text-xs text-[#7A6F68] mt-2 leading-relaxed">Dành 10 phút trước khi ngủ để tổng kết ngày cũ và viết 3 ưu tiên quan trọng cho ngày mai — để ngủ thật an giấc.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FORM ĐĂNG KÝ -->
-  <section id="dang-ky" class="bg-[#F3ECE8]/40 py-16 border-t border-[#EBE5DC]">
-    <div class="max-w-md mx-auto px-6">
-      <div class="bg-white rounded-3xl p-8 shadow-xl border border-[#EBE5DC]">
-        <div class="text-center mb-7">
-          <span class="inline-block bg-[#9A5B4C] text-white text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-full mb-3">
-            Đăng Ký Miễn Phí
-          </span>
-          <h2 class="font-serif-title text-3xl text-[#2A2421] font-medium">Bắt Đầu Hành Trình Của Bạn</h2>
-          <p class="text-xs text-[#7A6F68] mt-2 leading-relaxed">
-            Điền thông tin bên dưới để nhận tài liệu hướng dẫn và link tham gia nhóm Zalo đồng hành.
-          </p>
+    <section id="hanh-trinh" class="section">
+      <div class="wrap">
+        <div class="center">
+          <span class="eyebrow">Lộ trình rèn luyện</span>
+          <h2 class="section-title">7 trụ cột trong 21 ngày</h2>
+          <p class="lead">Không làm tất cả cùng một lúc. Mỗi thói quen được đưa vào như một điểm tựa nhỏ để bạn dần thiết lập lại cách sống của mình.</p>
         </div>
-        <form id="regForm" onsubmit="handleRegistration(event)" class="space-y-4">
-          <div>
-            <label for="fullname" class="block text-xs font-semibold text-[#2A2421] uppercase tracking-wider mb-1.5">Họ và tên *</label>
-            <input type="text" id="fullname" required placeholder="Ví dụ: Nguyễn Phương Anh"
-              class="w-full px-4 py-3 text-sm rounded-xl border border-[#EBE5DC] focus:outline-none focus:border-[#9A5B4C] focus:ring-1 focus:ring-[#9A5B4C] transition bg-[#FBF9F5]/60" />
+
+        <div class="pillars">
+          <article class="pillar"><div class="num">01</div><div><h3>Dậy sớm hơn 30 phút</h3><p>Có một khoảng thời gian yên tĩnh cho bản thân trước khi bước vào vai trò của một người mẹ, người vợ hay người đi làm.</p></div></article>
+          <article class="pillar"><div class="num">02</div><div><h3>Vận động nhẹ nhàng</h3><p>15–20 phút đi bộ, giãn cơ hoặc tập luyện vừa sức để cơ thể được đánh thức và duy trì năng lượng.</p></div></article>
+          <article class="pillar"><div class="num">03</div><div><h3>Đọc để nuôi dưỡng tâm trí</h3><p>Dành một khoảng ngắn mỗi ngày cho sách thay vì chỉ tiếp nhận dòng thông tin ngắn và liên tục từ mạng xã hội.</p></div></article>
+          <article class="pillar"><div class="num">04</div><div><h3>Quản trị điện thoại</h3><p>Chủ động đặt ranh giới với màn hình để lấy lại sự tập trung và thời gian cho những điều thực sự quan trọng.</p></div></article>
+          <article class="pillar"><div class="num">05</div><div><h3>Ăn tại nhà nhiều hơn</h3><p>Quay về những bữa ăn đơn giản, chủ động và phù hợp với nhịp sống của chính mình.</p></div></article>
+          <article class="pillar"><div class="num">06</div><div><h3>Thực hành biết ơn</h3><p>Ghi nhận những điều nhỏ đang có thay vì để tâm trí chỉ chạy theo những điều còn thiếu.</p></div></article>
+          <article class="pillar"><div class="num">07</div><div><h3>Lập kế hoạch & review</h3><p>Mỗi tối nhìn lại ngày đã qua và chọn 3 ưu tiên cho ngày mai — ít hơn, rõ hơn và chủ động hơn.</p></div></article>
+        </div>
+
+        <div class="timeline">
+          <article class="week">
+            <span class="tag">Tuần 1 · Quan sát</span>
+            <h3>Trở về với nhịp của mình</h3>
+            <p>Nhìn thấy những thói quen đang lấy mất thời gian và năng lượng. Không phán xét, chỉ quan sát và bắt đầu điều chỉnh.</p>
+          </article>
+          <article class="week">
+            <span class="tag">Tuần 2 · Thiết lập</span>
+            <h3>Tạo những điểm tựa nhỏ</h3>
+            <p>Đưa các thói quen vào lịch sống theo mức vừa sức, ưu tiên tính lặp lại thay vì cảm giác “làm thật nhiều”.</p>
+          </article>
+          <article class="week">
+            <span class="tag">Tuần 3 · Làm chủ</span>
+            <h3>Biến nỗ lực thành nhịp sống</h3>
+            <p>Review, tinh chỉnh và chọn những gì phù hợp để tiếp tục sau challenge — không cần giữ mọi thứ, chỉ giữ điều có ích.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="phu-hop" class="section fit">
+      <div class="wrap">
+        <div class="center">
+          <span class="eyebrow">Dành cho ai?</span>
+          <h2 class="section-title">Một hành trình nhỏ, nếu bạn đang muốn bắt đầu lại.</h2>
+        </div>
+
+        <div class="fit-grid">
+          <div class="fit-card">
+            <h3>Phù hợp nếu bạn...</h3>
+            <div class="check"><b>✓</b><span>Muốn sống chủ động hơn nhưng không muốn tự ép mình bằng những mục tiêu cực đoan.</span></div>
+            <div class="check"><b>✓</b><span>Thường xuyên ưu tiên công việc, gia đình và quên mất thời gian dành cho chính mình.</span></div>
+            <div class="check"><b>✓</b><span>Đã nhiều lần bắt đầu một thói quen rồi bỏ dở và muốn thử một cách nhẹ nhàng hơn.</span></div>
+            <div class="check"><b>✓</b><span>Sẵn sàng dành một khoảng thời gian nhỏ mỗi ngày để thực hành.</span></div>
           </div>
-          <div>
-            <label for="phone" class="block text-xs font-semibold text-[#2A2421] uppercase tracking-wider mb-1.5">Số điện thoại / Zalo *</label>
-            <input type="tel" id="phone" required placeholder="Ví dụ: 0912 345 678"
-              class="w-full px-4 py-3 text-sm rounded-xl border border-[#EBE5DC] focus:outline-none focus:border-[#9A5B4C] focus:ring-1 focus:ring-[#9A5B4C] transition bg-[#FBF9F5]/60" />
+          <div class="fit-card">
+            <h3>Không cần phải...</h3>
+            <div class="check not"><b>×</b><span>Dậy lúc 5 giờ sáng nếu nhịp sống của bạn không phù hợp.</span></div>
+            <div class="check not"><b>×</b><span>Hoàn thành 100% mọi nhiệm vụ mới được coi là thành công.</span></div>
+            <div class="check not"><b>×</b><span>So sánh tốc độ của mình với người khác trong hành trình.</span></div>
+            <div class="check not"><b>×</b><span>Trở thành một phiên bản “hoàn hảo” sau 21 ngày.</span></div>
           </div>
-          <div>
-            <label for="email" class="block text-xs font-semibold text-[#2A2421] uppercase tracking-wider mb-1.5">Email nhận tài liệu *</label>
-            <input type="email" id="email" required placeholder="emailcuaban@gmail.com"
-              class="w-full px-4 py-3 text-sm rounded-xl border border-[#EBE5DC] focus:outline-none focus:border-[#9A5B4C] focus:ring-1 focus:ring-[#9A5B4C] transition bg-[#FBF9F5]/60" />
+        </div>
+      </div>
+    </section>
+
+    <section id="ve-toi" class="section">
+      <div class="wrap about-grid">
+        <div class="portrait-placeholder" style="padding:0;overflow:hidden;">
+          <img src="cam-nhung.jpg" alt="Cẩm Nhung — người đồng hành chương trình 21 Ngày Kỷ Luật Mềm"
+               style="width:100%;height:100%;min-height:470px;object-fit:cover;object-position:center 35%;">
+        </div>
+        <div class="about-copy">
+          <span class="eyebrow">Người đồng hành</span>
+          <h2>Cẩm Nhung</h2>
+          <p>
+            “21 Ngày Kỷ Luật Mềm” được xây dựng như một hành trình thực hành đời sống — không phải lời hứa thay đổi cuộc đời trong vài tuần,
+            mà là lời mời bắt đầu từ những điều nhỏ và có thể làm được.
+          </p>
+          <p>
+            Tinh thần của chương trình là tự lãnh đạo bằng sự tỉnh táo và tử tế: biết mình muốn điều gì, chủ động lựa chọn và vẫn cho phép bản thân có những ngày chưa hoàn hảo.
+          </p>
+          <div class="about-note">“Tôi không cần trở thành một người khác. Tôi chỉ muốn mỗi ngày sống gần hơn với người phụ nữ mình muốn trở thành.”</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:30px">
+      <div class="narrow center">
+        <span class="eyebrow">Trước khi bắt đầu</span>
+        <h2 class="section-title">21 ngày không phải đích đến.</h2>
+        <p class="lead">Đó chỉ là khoảng thời gian đủ dài để bạn nhìn thấy: mình hoàn toàn có thể thay đổi cách sống mà không cần chiến đấu với chính mình mỗi ngày.</p>
+        <div style="margin-top:30px"><a class="btn btn-primary" href="#dang-ky">Tôi muốn bắt đầu →</a></div>
+      </div>
+    </section>
+
+    <section id="dang-ky" class="register">
+      <div class="form-shell">
+        <div class="center" style="margin-bottom:28px">
+          <span class="eyebrow">Đăng ký miễn phí</span>
+          <h2 class="section-title" style="font-size:44px">Bắt đầu hành trình của bạn</h2>
+          <p class="lead" style="font-size:13px">Điền thông tin bên dưới. Sau khi kết nối hệ thống nhận đăng ký, thông tin sẽ được gửi tới người tổ chức chương trình.</p>
+        </div>
+
+        <form id="regForm" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="fullname">Họ và tên *</label>
+              <input id="fullname" name="fullname" type="text" autocomplete="name" placeholder="Nguyễn Phương Anh" required>
+            </div>
+            <div class="field">
+              <label for="phone">Số điện thoại / Zalo *</label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0912 345 678" required>
+            </div>
+            <div class="field full">
+              <label for="email">Email nhận tài liệu *</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="emailcuaban@gmail.com" required>
+            </div>
           </div>
-          <div class="pt-2">
-            <button type="submit"
-              class="w-full py-4 bg-[#9A5B4C] text-white font-semibold text-xs uppercase tracking-widest rounded-xl hover:bg-[#7d4a3c] transition shadow-md flex items-center justify-center gap-2">
-              <span>Xác Nhận Đăng Ký Miễn Phí</span><span>→</span>
-            </button>
-          </div>
-          <p class="text-[11px] text-center text-[#7A6F68] pt-1">🔒 Cam kết bảo mật thông tin 100%. Không spam.</p>
+
+          <button class="btn btn-primary" type="submit" style="width:100%;margin-top:18px">Xác nhận đăng ký miễn phí →</button>
+          <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+          <p class="privacy">🔒 Thông tin chỉ được sử dụng cho việc tham gia chương trình.</p>
         </form>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <section class="section">
+      <div class="narrow center">
+        <span class="eyebrow">Câu hỏi thường gặp</span>
+        <h2 class="section-title">Trước khi bạn tham gia</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Chương trình có thực sự miễn phí không?</summary>
+          <p>Có. Nội dung hiện tại của landing page xác định đây là challenge 21 ngày miễn phí.</p>
+        </details>
+        <details>
+          <summary>Nếu có ngày tôi không hoàn thành thì sao?</summary>
+          <p>Bạn tiếp tục vào ngày hôm sau. Tinh thần của “kỷ luật mềm” là duy trì sự chủ động mà không biến một ngày chưa trọn vẹn thành lý do để bỏ cả hành trình.</p>
+        </details>
+        <details>
+          <summary>Mỗi ngày cần dành bao nhiêu thời gian?</summary>
+          <p>Landing page không đặt một con số cố định cho toàn bộ hoạt động. Mục tiêu là lựa chọn mức thực hành vừa sức với lịch sống của bạn.</p>
+        </details>
+        <details>
+          <summary>Tôi nhận tài liệu và tham gia cộng đồng bằng cách nào?</summary>
+          <p>Phần này cần được kết nối với hệ thống nhận đăng ký và đường link nhóm Zalo thật trước khi website chính thức mở đăng ký.</p>
+        </details>
+      </div>
+    </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-[#FBF9F5] py-12 px-6 text-center border-t border-[#EBE5DC]">
-    <div class="max-w-xl mx-auto space-y-3">
-      <div class="font-serif-title text-2xl tracking-wider text-[#2A2421] font-medium">
-        MS CẨM NHUNG <span class="text-xs font-sans text-[#7A6F68] mx-1">·</span> <em class="text-[#9A5B4C]">Becoming HER</em>
-      </div>
-      <p class="text-xs text-[#7A6F68]">© 2026 Challenge 21 Ngày Kỷ Luật Mềm cùng Ms Cẩm Nhung. Tất cả các quyền được bảo lưu.</p>
-      <p class="font-serif-title italic text-sm text-[#7A6F68] pt-2">
-        "Mỗi ngày một chút tử tế với chính mình, cuộc đời sẽ tự khắc dịu êm."
-      </p>
+  <footer>
+    <div class="wrap">
+      <div class="name">MS CẨM NHUNG · <em style="color:var(--accent)">Becoming Her</em></div>
+      <p>© 2026 Phụ Nữ Tự Lực · 21 Ngày Kỷ Luật Mềm</p>
+      <p>“Mỗi ngày một chút tử tế với chính mình, cuộc đời sẽ tự khắc dịu êm.”</p>
     </div>
   </footer>
 
-  <!-- MODAL THÀNH CÔNG (GIỐNG HỆT ẢNH MẪU) -->
-  <div id="successModal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden items-center justify-center p-4" style="display:none;">
-    <div class="bg-white rounded-3xl max-w-sm w-full p-8 text-center shadow-2xl border border-[#EBE5DC] fade-in relative">
-      <button onclick="closeModal()" class="absolute top-4 right-4 text-stone-400 hover:text-[#2A2421] text-xl font-bold">✕</button>
-      <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-[#E5ECE3] flex items-center justify-center">
-        <svg class="w-8 h-8 text-[#5E7A55]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-        </svg>
-      </div>
-      <h3 class="font-serif-title text-2xl sm:text-3xl text-[#2A2421] font-normal leading-snug mb-4">
-        Chúc mừng bạn đã<br/>đăng ký thành công!
-      </h3>
-      <p class="text-xs sm:text-sm text-[#7A6F68] leading-relaxed mb-6 font-light">
-        Chúng tôi đã gửi email xác nhận cùng link tham gia nhóm Zalo đồng hành. Hãy kiểm tra hộp thư đến của bạn nhé!
-      </p>
-      <div class="space-y-3">
-        <a href="https://zalo.me" target="_blank"
-          class="inline-block w-full py-3.5 px-5 bg-[#9A5B4C] text-white text-xs font-semibold uppercase tracking-widest rounded-xl hover:bg-[#7d4a3c] transition shadow-md">
-          Tham Gia Nhóm Zalo Ngay
-        </a>
-        <button type="button" onclick="closeModal()" class="w-full py-2.5 text-xs text-[#7A6F68] hover:text-[#2A2421]">Đóng cửa sổ này</button>
+  <div class="mobile-cta">
+    <a class="btn btn-primary" style="width:100%" href="#dang-ky">Đăng ký miễn phí</a>
+  </div>
+
+  <div id="successModal" class="modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="tick">✓</div>
+      <h3 id="modalTitle">Thông tin đã được ghi nhận.</h3>
+      <p id="modalText">Cảm ơn bạn đã đăng ký.</p>
+      <div class="modal-actions">
+        <a id="zaloBtn" class="btn btn-primary" href="#" target="_blank" rel="noopener" style="display:none">Tham gia nhóm Zalo →</a>
+        <button id="closeModal" class="btn btn-secondary" type="button">Đóng</button>
       </div>
     </div>
   </div>
 
-  <!-- FLOATING CTA (MOBILE) -->
-  <div class="sm:hidden fixed bottom-4 inset-x-4 z-40">
-    <a href="#dang-ky" class="flex items-center justify-center w-full py-4 bg-[#9A5B4C] text-white font-semibold text-xs uppercase tracking-widest rounded-full shadow-2xl border border-white/20">
-      Đăng Ký Tham Gia Miễn Phí
-    </a>
-  </div>
-
   <script>
-    function handleRegistration(e) {
-      e.preventDefault();
-      const lead = {
-        fullname: document.getElementById('fullname').value.trim(),
-        phone: document.getElementById('phone').value.trim(),
-        email: document.getElementById('email').value.trim(),
-        time: new Date().toISOString()
-      };
-      const leads = JSON.parse(localStorage.getItem('registered_leads') || '[]');
-      leads.push(lead);
-      localStorage.setItem('registered_leads', JSON.stringify(leads));
-      const modal = document.getElementById('successModal');
-      modal.style.display = 'flex';
-    }
-    function closeModal() {
-      document.getElementById('successModal').style.display = 'none';
-      document.getElementById('regForm').reset();
-    }
-  </script>
+    /*
+      ===== CẤU HÌNH TRƯỚC KHI ĐƯA WEBSITE LÊN CHÍNH THỨC =====
+      1) registrationEndpoint:
+         Dán URL nhận dữ liệu của Google Apps Script / Formspree / backend của chị.
+         Để trống => website chỉ chạy ở chế độ demo, KHÔNG gửi lead đi đâu cả.
 
+      2) zaloGroupUrl:
+         Dán link nhóm Zalo thật. Để trống => nút Zalo sẽ được ẩn.
+    */
+    const CONFIG = {
+      registrationEndpoint: "",
+      zaloGroupUrl: "https://zalo.me/g/9ko2yfozptpcted43igt"
+    };
+
+    const form = document.getElementById("regForm");
+    const statusBox = document.getElementById("formStatus");
+    const modal = document.getElementById("successModal");
+    const modalText = document.getElementById("modalText");
+    const zaloBtn = document.getElementById("zaloBtn");
+
+    function showStatus(type, text){
+      statusBox.className = "form-status " + type;
+      statusBox.textContent = text;
+    }
+
+    function openModal(message){
+      modalText.textContent = message;
+      if (CONFIG.zaloGroupUrl){
+        zaloBtn.href = CONFIG.zaloGroupUrl;
+        zaloBtn.style.display = "inline-flex";
+      } else {
+        zaloBtn.style.display = "none";
+      }
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden","false");
+    }
+
+    function closeModal(){
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden","true");
+    }
+
+    document.getElementById("closeModal").addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => { if(e.target === modal) closeModal(); });
+    document.addEventListener("keydown", (e) => { if(e.key === "Escape") closeModal(); });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const fullname = document.getElementById("fullname").value.trim();
+      const phone = document.getElementById("phone").value.replace(/\s+/g,"").trim();
+      const email = document.getElementById("email").value.trim();
+
+      if (fullname.length < 2){
+        showStatus("error","Chị vui lòng nhập họ và tên.");
+        return;
+      }
+      if (!/^(0|\+84)\d{8,10}$/.test(phone)){
+        showStatus("error","Số điện thoại chưa đúng định dạng. Ví dụ: 0912345678.");
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        showStatus("error","Email chưa đúng định dạng.");
+        return;
+      }
+
+      const payload = {
+        fullname,
+        phone,
+        email,
+        createdAt: new Date().toISOString(),
+        source: "phunutuluc.com - 21 Ngày Kỷ Luật Mềm"
+      };
+
+      if (!CONFIG.registrationEndpoint){
+        showStatus("info","Website đang ở chế độ demo: form chưa được kết nối nơi nhận đăng ký.");
+        openModal("Bản thiết kế đã hoạt động. Trước khi mở đăng ký thật, cần nối form với Google Sheets/Formspree và thêm link nhóm Zalo.");
+        return;
+      }
+
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalText = submitButton.textContent;
+      submitButton.disabled = true;
+      submitButton.textContent = "Đang gửi...";
+
+      try{
+        const res = await fetch(CONFIG.registrationEndpoint,{
+          method:"POST",
+          headers:{"Content-Type":"application/json"},
+          body:JSON.stringify(payload)
+        });
+        if(!res.ok) throw new Error("Không thể gửi đăng ký");
+
+        showStatus("ok","Đăng ký thành công.");
+        form.reset();
+        openModal("Cảm ơn bạn. Thông tin đăng ký đã được ghi nhận.");
+      }catch(err){
+        showStatus("error","Chưa gửi được đăng ký. Vui lòng thử lại hoặc liên hệ người tổ chức.");
+      }finally{
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
+      }
+    });
+  </script>
 </body>
 </html>
