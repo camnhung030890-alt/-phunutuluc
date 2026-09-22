@@ -97,7 +97,7 @@
 
     .hero{
       position:relative;overflow:hidden;
-      padding:98px 0 82px;
+      padding:55px 0 82px;
       background:
         radial-gradient(circle at 78% 20%, rgba(183,122,103,.12), transparent 28%),
         radial-gradient(circle at 10% 80%, rgba(102,115,93,.08), transparent 25%);
@@ -119,11 +119,11 @@
     .quote-card{
       position:relative;background:rgba(255,253,249,.84);border:1px solid var(--line);
       border-radius:180px 180px 28px 28px;padding:86px 44px 42px;
-      min-height:510px;display:flex;flex-direction:column;justify-content:flex-end;
+      min-height:430px;display:flex;flex-direction:column;justify-content:flex-end;
       box-shadow:var(--shadow)
     }
     .quote-card::before{
-      content:"21";position:absolute;top:50px;left:50%;transform:translateX(-50%);
+      content:"";position:absolute;top:50px;left:50%;transform:translateX(-50%);
       font-family:var(--serif);font-size:150px;line-height:1;color:rgba(154,91,76,.10)
     }
     .quote-card blockquote{
@@ -159,7 +159,7 @@
     .manifesto .eyebrow{color:#d7a896}
     .manifesto .eyebrow::before{background:#d7a896}
     .manifesto h2{color:white}
-    .manifesto p{font-family:var(--serif);font-size:clamp(27px,4vw,40px);line-height:1.3;margin:28px 0 0}
+    .manifesto p{font-family:var(--serif);font-size:clamp(20px,2.4vw,27px);line-height:1.3;margin:20px 0 0}
     .manifesto strong{color:#ddb5a6;font-weight:500}
 
     .pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:48px}
@@ -266,7 +266,7 @@
     @media (max-width:900px){
       .navlinks a:not(.btn){display:none}
       .hero-grid,.about-grid{grid-template-columns:1fr}
-      .hero{padding-top:72px}
+      .hero{padding-top:45px}
       .hero-grid{gap:46px}
       .quote-card{min-height:400px;max-width:520px;margin:auto}
       .problem-grid,.timeline{grid-template-columns:1fr}
@@ -310,7 +310,7 @@
 </head>
 
 <body>
-  <div class="announcement">21 ngày đồng hành miễn phí dành riêng cho phụ nữ · 2026</div>
+  <div class="announcement">7 ngày đồng hành dành cho phụ nữ đã kết hôn · 2026</div>
 
   <header>
     <div class="wrap nav">
@@ -322,7 +322,7 @@
         <a href="#hanh-trinh">Hành trình</a>
         <a href="#phu-hop">Dành cho ai</a>
         <a href="#ve-toi">Về tôi</a>
-        <a class="btn btn-primary" href="#dang-ky">Đăng ký miễn phí</a>
+        <a class="btn btn-primary" href="#dang-ky">THAM GIA 7 NGÀY</a>
       </nav>
     </div>
   </header>
@@ -665,11 +665,11 @@
     <section id="dang-ky" class="register">
       <div class="form-shell">
        <div class="center" style="margin-bottom:28px">
-  <span class="eyebrow">Đăng ký tham gia miễn phí</span>
+  <span class="eyebrow">Đăng ký tham gia</span>
   <h2 class="section-title" style="font-size:44px">Bắt đầu 7 ngày bớt cáu với chồng</h2>
+  <p style="font-size:22px; font-weight:600; margin:10px 0 18px">Phí đồng hành 7 ngày: 199.000đ</p>
   <p class="lead" style="font-size:15px">
-    Để lại thông tin để cùng mình bắt đầu hành trình 7 ngày:
-    hiểu cơn giận, nhận ra điều mình thực sự cần và tập một cách phản ứng khác đi.
+    7 ngày thực hành cùng nhau để bạn hiểu điều gì đang kích hoạt mình, biết dừng lại trước khi phản ứng và từng bước nói điều mình thực sự cần thay vì cáu gắt hay cằn nhằn.
   </p>
 </div>
 
@@ -686,20 +686,20 @@
       </div>
       <div class="faq">
         <details>
-          <summary>Chương trình có thực sự miễn phí không?</summary>
-          <p>Có. Nội dung hiện tại của landing page xác định đây là challenge 21 ngày miễn phí.</p>
+          <summary>Phí tham gia chương trình là bao nhiêu?</summary>
+          <p>Có. Phí đồng hành 7 ngày là 199.000đ. Sau khi đăng ký, bạn sẽ nhận được hướng dẫn để bắt đầu hành trình.</p>
         </details>
         <details>
           <summary>Nếu có ngày tôi không hoàn thành thì sao?</summary>
-          <p>Bạn tiếp tục vào ngày hôm sau. Tinh thần của “kỷ luật mềm” là duy trì sự chủ động mà không biến một ngày chưa trọn vẹn thành lý do để bỏ cả hành trình.</p>
+          <p>Không sao cả. Bạn chỉ cần tiếp tục vào ngày hôm sau. Đây không phải một thử thách để làm thật hoàn hảo, mà là 7 ngày để bạn tập một cách phản ứng khác đi.</p>
         </details>
         <details>
           <summary>Mỗi ngày cần dành bao nhiêu thời gian?</summary>
-          <p>Landing page không đặt một con số cố định cho toàn bộ hoạt động. Mục tiêu là lựa chọn mức thực hành vừa sức với lịch sống của bạn.</p>
+          <p>Khoảng 10–15 phút mỗi ngày. Quan trọng không phải làm thật nhiều, mà là dành một khoảng thời gian đủ để quan sát mình và thực hành điều nhỏ của ngày hôm đó.</p>
         </details>
         <details>
           <summary>Tôi nhận tài liệu và tham gia cộng đồng bằng cách nào?</summary>
-          <p>Phần này cần được kết nối với hệ thống nhận đăng ký và đường link nhóm Zalo thật trước khi website chính thức mở đăng ký.</p>
+          <p>Sau khi đăng ký, bạn sẽ nhận được hướng dẫn để tham gia nhóm đồng hành và nhận nội dung thực hành trong 7 ngày.</p>
         </details>
       </div>
     </section>
@@ -708,7 +708,7 @@
   <footer>
     <div class="wrap">
       <div class="name">MS CẨM NHUNG · <em style="color:var(--accent)">Becoming Her</em></div>
-      <p>© 2026 Phụ Nữ Tự Lực · 21 Ngày Kỷ Luật Mềm</p>
+      <p>© 2026 Phụ Nữ Tự Lực · 7 ngày bớt cáu với chồng </p>
       <p>“Mỗi ngày một chút tử tế với chính mình, cuộc đời sẽ tự khắc dịu êm.”</p>
     </div>
   </footer>
